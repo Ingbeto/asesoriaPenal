@@ -1,20 +1,24 @@
 const btnInicio = document.getElementById('btn-inicio'),
     btnCerrarMenu = document.getElementById('btn-menu-cerrar'),
-    grid = document.getElementById('grid'),
     containerEnlacesNav = document.querySelector('#menu .container-enlaces-nav'),
     containerSubcategorias = document.querySelector('#menu .container-subcategorias'),
     esDispositivoMovil = () => window.innerWidth <= 800;
 
-btnInicio.addEventListener('mouseover', () => {
-    if(!esDispositivoMovil()){
-        grid.classList.add('activo');
-    }   
-});
-grid.addEventListener('mouseleave', ()=>{
- if(!esDispositivoMovil()){
-        grid.classList.remove('activo');
+document.querySelectorAll('.desplegables').forEach((item) => {
+    const container = document.getElementById(`${item.dataset.container}`);
+    if(container){
+        item.addEventListener('mouseover', (e) => {
+            document.querySelectorAll('.grid').forEach(grid => {
+                grid.classList.remove('activo');
+            });
+            container.classList.add('activo');
+            container.addEventListener('mouseleave', () => {
+               container.classList.remove('activo');
+            });
+        })
     }
 });
+
 
 document.querySelectorAll('#menu .categorias a').forEach((elemento)=>{
     if(!esDispositivoMovil()){

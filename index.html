@@ -5,66 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
     <title>Document</title>
 </head>
 <body>
-    <nav class="menu" id="menu">
-
-        <div class="container container-botones-menu">
-            <button id="btn-menu-barras" class="btn-menu-barras"><i class="fas fa-bars"></i></button>
-            <button id="btn-menu-cerrar" class="btn-menu-cerrar"><i class="fas fa-times"></i></button>
+    <header class="header-nav">
+        <div class="image">
+            <a href="https://www.asesoriapenal247.com/">
+                <picture title="Nuevo home">
+                    <source type="image/webp" srcset="./img/logo.webp">
+                    <img height="170" width="149" src="./img/logo.webp" alt="Asesoria penal 247 Abogados penalistas Colombia">
+                </picture>
+            </a>
         </div>
-        
-        <div class="container container-enlaces-nav">
-            <div class="btn-inicio" id="btn-inicio">
-                <p> INICIO</p>
-            </div>
-            <div class="enlaces">   
-                <a href="#"> QUIENES SOMOS</a>
-                <a href="#"> SERVICIOS</a>
-                <a href="#"> COMPLIANCE</a>
-                <a href="#"> INSTITUCIONAL</a>
-                <a href="#"> BLOG</a>
-                <a href="#"> CONTACTO</a>
-            </div>
-        </div>
-        
-        <div class="container container-grid">
-            <div class="grid" id="grid">
-                <div class="banners">
-                    <a href="#">
-                        <img src="img/RobloxScreenShot20220110_154920005.png" alt="imagen">
-                    </a>
-                </div>
-                <div class="categorias">
-                    <button class="btn-regresar"><i class="fas fa-arrow-left"></i> back</button>
+        <nav class="menu" id="menu">
 
-                    <a href="#" data-categoria="consultas">CONSULTAS</a>
-                    <a href="#" data-categoria="asesoria-y-representacion">ASESORÍA Y REPRESENTACIÓN <i class="fa-solid fa-angle-right"></i></a>
-                    <a href="#" data-categoria="asistencia-inmediata">ASISTENCIA INMEDIATA</a>
-                    <a href="#" data-categoria="concepto-juridico">CONCEPTO JURÍDICO</a>
-                    <a href="#" data-categoria="indagacion-preliminar">INDAGACIÓN PRELIMINAR</a>
-                    <a href="#" data-categoria="investigador-privado">INVESTIGADOR PRIVADO</a>
-                    <a href="#" data-categoria="peritazgos">PERITAZGOS</a>
-                    <a href="#" data-categoria="subrogacion">SUBROGACIÓN</a>
-                    <a href="#" data-categoria="extradicion">EXTRADICIÓN</a>
+            <div class="container container-botones-menu">
+                <button id="btn-menu-barras" class="btn-menu-barras"><i class="fas fa-bars"></i></button>
+                <button id="btn-menu-cerrar" class="btn-menu-cerrar"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="container container-enlaces-nav">
+                <ul>
+                    <li>
+                        <a href="">INICIO</a>
+                    </li>
+                   <li data-container="nosotros" class="desplegables">
+                        <a class="dropdowns">
+                           <span>NOSOTROS</span>
+                           <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+                    <li data-container="servicio" class="desplegables">
+                        <a class="dropdowns">
+                           <span>SERVICIOS</span>
+                           <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">COMPLIANCE</a>
+                    </li>
+                    <li data-container="institucional" class="desplegables">
+                        <a class="dropdowns">
+                           <span>INSTITUCIONAL</span>
+                           <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="container container-grid">
+                <div class="grid" data-container="servicio" id="servicio">
+                    <div class="banners">
+                        <a href="#">
+                            <img src="img/services.jpeg" alt="imagen">
+                        </a>
+                    </div>
+                    <div class="categorias">
+                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i> back</button>
+                        <a href="#" data-categoria="consultas">CONSULTAS</a>
+                        <a href="#" data-categoria="asesoria-y-representacion">ASESORÍA Y REPRESENTACIÓN <i class="fa-solid fa-angle-right"></i></a>
+                        <a href="#" data-categoria="asistencia-inmediata">ASISTENCIA INMEDIATA</a>
+                        <a href="#" data-categoria="concepto-juridico">CONCEPTO JURÍDICO</a>
+                        <a href="#" data-categoria="indagacion-preliminar">INDAGACIÓN PRELIMINAR</a>
+                        <a href="#" data-categoria="investigador-privado">INVESTIGADOR PRIVADO</a>
+                        <a href="#" data-categoria="peritazgos">PERITAZGOS</a>
+                        <a href="#" data-categoria="subrogacion">SUBROGACIÓN</a>
+                        <a href="#" data-categoria="extradicion">EXTRADICIÓN</a>
+                    </div>
+                    <div class="container-subcategorias">
+                        <div class="subcategoria" data-categoria="asesoria-y-representacion">
+                            <button class="btn-regresar"><i class="fas fa-arrow-left"></i>back</button>
+                            <h3 class="subtitulo">ASESORÍA Y REPRESENTACIÓN</h3>
+                            <a href="#">AUDIENCIAS PRELIMINARES</a>
+                            <a href="#">AUDIENCIAS JUICIO ORAL LEY 906 DEL 2004</a>
+                            <a href="#">AUDIENCIAS DEL PROCEDIMIENTO PENAL ABREVIADO LEY 1826 DEL 2017</a>
+                            <a href="#">AUDIENCIAS INDIVIDUAL</a>
+                            <a href="#">AUDIENCIAS DE INDIVIDUALIZACIÓN DE LA PENA</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="container-subcategorias">
-                    <div class="subcategoria" data-categoria="asesoria-y-representacion">
-                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i>back</button>
-                        <h3 class="subtitulo">ASESORÍA Y REPRESENTACIÓN</h3>
-                        <a href="#">AUDIENCIAS PRELIMINARES</a>
-                        <a href="#">AUDIENCIAS JUICIO ORAL LEY 906 DEL 2004</a>
-                        <a href="#">AUDIENCIAS DEL PROCEDIMIENTO PENAL ABREVIADO LEY 1826 DEL 2017</a>
-                        <a href="#">AUDIENCIAS INDIVIDUAL</a>
-                        <a href="#">AUDIENCIAS DE INDIVIDUALIZACIÓN DE LA PENA</a>
+                <div class="grid" id="nosotros">
+                    <div class="banners">
+                        <a href="#">
+                            <img src="img/about-us.jpeg" alt="imagen">
+                        </a>
+                    </div>
+                    <div class="categorias">
+                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i> back</button>
+                        <a href="#">QUIENES SOMOS</a>
+                        <a href="#">COMUNIDAD DE TRABAJO</a>
+                        <a href="#">ADMINISTRATIVO Y FINANCIERO</a>
+                    </div>
+                </div>
+                <div class="grid" id="institucional">
+                    <div class="banners">
+                        <a href="#">
+                            <img src="img/about-us.jpeg" alt="imagen">
+                        </a>
+                    </div>
+                    <div class="categorias">
+                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i> back</button>
+                        <a href="#">CORPORATIVO</a>
+                        <a href="#">TESTIMONIOS</a>
+                        <a href="#">PAGO EN LÍNEA</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
-
+        </nav>   
+        <button class="llamanos">
+            <i class="fa-solid fa-phone"></i>
+            <span>Llámanos</span>
+            <span>314 424 0486</span>
+        </button>
+    </header>
     <main class="container">
         <article></article>
     </main>

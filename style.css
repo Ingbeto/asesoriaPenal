@@ -56,6 +56,10 @@ main article{
     font-size: 18px;
 }
 
+.header-nav .llamanos:hover{
+    transform: scale(1.1);
+}
+
 .menu {
     padding:5px;
     flex-grow: 1;
@@ -192,10 +196,8 @@ main article{
     font-size: 14px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-}
-.grid .categorias a i{
-    display: none;
 }
 
 .grid .categorias a:hover{
@@ -213,6 +215,7 @@ main article{
 .grid .subcategoria {
     display: none;
 }
+
 .grid .subcategoria.activo {
     display: grid;
 }
@@ -282,37 +285,42 @@ main article{
         flex-wrap: wrap;
         padding: 0 10px;
         align-items: center;
-        justify-content: space-between;
-    }
-    
-    .header-nav .menu{
-        margin-top: 100px;
+        background-image: url('https://www.asesoriapenal247.com/wp-content/uploads/2019/11/background-menu.jpg');
+        background-size: cover;
+        background-color: white;
     }
 
     .header-nav .image img {
         width: 100px;
         height: 100px;
     }
-
+    
     .header-nav .llamanos{
         width: 100%;
     }
 
     .menu .container{
         width: 90%;
+        margin: 0 auto;
     }
+
+   
     .menu .container-botones-menu{
         display: flex;
+        justify-content: flex-end;
     }
     .menu .container-enlaces-nav{
+        margin-top: 80px;
         padding: 20px;
+        background-color: white;
+        height: 100vh;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         position: fixed;
         left: 0;
         height: 100vh;
-        width: 80%;
+        width: 100%;
         z-index: 2000;
         transition: .3s ease all;
         transform: translate(-100%);
@@ -330,6 +338,13 @@ main article{
 
     .menu ul {
         display: block;
+        width: 100%;
+    }
+
+    .menu ul li {
+        border-radius: 10px;
+        border : 1px solid gray;
+        margin-bottom: 5px;
     }
 
     .grid{
@@ -344,6 +359,7 @@ main article{
         height: 100vh;
         grid-template-areas: "categorias categorias categorias categorias";
     }
+
     .grid.activo{
         transform: translateX(0%);
     }

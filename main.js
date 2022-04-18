@@ -45,16 +45,11 @@ document.querySelector('#btn-menu-barras').addEventListener('click',(e)=>{
     }
 });
 
-btnInicio.addEventListener('click',(e) => {
-    e.preventDefault();
-    grid.classList.add('activo');
-    btnCerrarMenu.classList.add('activo');
-});
-
-document.querySelector('#grid .categorias .btn-regresar').addEventListener('click',(e)=>{
-    e.preventDefault();
-    grid.classList.remove('activo');
-    btnCerrarMenu.classList.remove('activo');
+document.querySelectorAll('.grid .categorias .btn-regresar').forEach(button => {
+  button.addEventListener('click', (event) => {
+      event.preventDefault();
+      button.parentElement.parentElement.classList.remove('activo')
+  });
 });
 
 document.querySelectorAll('#menu .categorias a').forEach((elemento)=>{
@@ -64,19 +59,10 @@ document.querySelectorAll('#menu .categorias a').forEach((elemento)=>{
                 containerSubcategorias.classList.add('activo');
                 document.querySelectorAll('#menu .subcategoria').forEach((categoria)=>{
                     categoria.classList.remove('activo');
-                    if(categoria.dataset.categoria== e.target){
+                    if(categoria.dataset.categoria == e.target.dataset.categoria){
                         categoria.classList.add('activo');
                     }
                 })
         }
     });
 });
-
-document.querySelectorAll('#grid .container-subcategorias .btn-regresar').forEach((boton)=>{
-    boton.addEventListener('click',(e)=>{
-    e.preventDefault();
-    containerSubcategorias.classList.remove('activo');
-    console.log();
-});
-
-})

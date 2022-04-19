@@ -5,7 +5,7 @@ const btnInicio = document.getElementById('btn-inicio'),
     esDispositivoMovil = () => window.innerWidth <= 800;
 
 document.querySelectorAll('.desplegables').forEach((item) => {
-    const container = document.getElementById(`${item.dataset.container}`);
+    const container = document.getElementById   (`${item.dataset.container}`);
     if(container){
         item.addEventListener('mouseover', (e) => {
             document.querySelectorAll('.grid').forEach(grid => {

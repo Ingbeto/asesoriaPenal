@@ -12,18 +12,22 @@ document.querySelectorAll('.desplegables').forEach((item) => {
                 grid.classList.remove('activo');
             });
             container.classList.add('activo');
-            container.addEventListener('mouseleave', () => {
-               container.classList.remove('activo');
-            });
         })
     }
 });
 
+document.querySelectorAll('.grid .btn-cerrar').forEach((button) => {
+   button.addEventListener('click', () => {
+        document.querySelectorAll('.grid').forEach(grid => {
+          grid.classList.remove('activo');
+        });
+   });
+});
 
-document.querySelectorAll('#menu .categorias a').forEach((elemento)=>{
+document.querySelectorAll('.categorias a').forEach((elemento)=>{
     if(!esDispositivoMovil()){
       elemento.addEventListener('mouseenter',(e)=>{
-        document.querySelectorAll('#menu .subcategoria').forEach((categoria)=>{
+        document.querySelectorAll('.subcategoria').forEach((categoria)=>{
             categoria.classList.remove('activo');   
             if(categoria.dataset.categoria === e.target.dataset.categoria){
                 categoria.classList.add('activo');
@@ -66,3 +70,11 @@ document.querySelectorAll('#menu .categorias a').forEach((elemento)=>{
         }
     });
 });
+
+document.querySelectorAll('.grid .container-subcategorias .btn-regresar').forEach(button => {
+  button.addEventListener('click', (event) => {
+      event.preventDefault();
+      button.parentElement.parentElement.classList.remove('activo')
+  });
+});
+

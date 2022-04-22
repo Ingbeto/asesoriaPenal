@@ -218,6 +218,10 @@ main article{
     min-height: 300px;
 }
 
+.grid .categoria h3 {
+    display: none;
+}
+
 .grid .categorias a{
     color: #14293D;
     font-size: 14px;
@@ -424,6 +428,20 @@ main article{
         display: block;
         padding: 0;
         transition: .3s ease all;
+        margin-left: 0;
+    }
+
+    .grid .subcategoria.activo {
+       display: inline-block;
+    }
+
+    .grid .subcategoria.activo h3, .grid .categorias h3 {
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+        margin: 10px 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #3F8FE3;
     }
 
     .grid .subcategoria::before {
@@ -438,6 +456,9 @@ main article{
     }
     .grid .btn-regresar{
         display: inline-block;
+        color: #3F8FE3;
+        background: none;
+        font-weight: bold;
     }
 
     .grid .banners{

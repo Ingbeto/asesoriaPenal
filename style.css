@@ -32,6 +32,12 @@ main article{
 
 }
 
+.banner-image {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
 .header-nav {
   display: flex;
   padding-left: 60px;
@@ -54,10 +60,6 @@ main article{
     font-size: 18px;
 }
 
-.header-nav .llamanos:hover{
-    transform: scale(1.1);
-}
-
 .menu {
     padding:5px;
     flex-grow: 1;
@@ -70,7 +72,7 @@ main article{
 
 .menu .container-botones-menu button{
     font-size:20px;
-    color: #fff;
+    color: #0b2a3f;
     padding:10px 20px;
     border:1px solid transparent;
     display:inline-block;
@@ -79,12 +81,13 @@ main article{
 }
 
 .menu .container-botones-menu button:hover{
-    border:1px solid rgba(255,255,255,.4);
+    transform: scale(1.1);
 }
 
 .menu .container-botones-menu button {
-   background-color: black;
    border-radius: 10px;
+   border-radius: 10px;
+   border:  1px solid #0b2a3f;
 }
 
 .menu .container-botones-menu .btn-menu-cerrar{
@@ -321,6 +324,10 @@ main article{
 
 @media screen and (max-width: 800px){
 
+    .banner-image {
+        background-color: #2C65A8;
+    }
+
     .header-nav {
         height: 100px;
         flex-wrap: wrap;
@@ -351,10 +358,10 @@ main article{
         justify-content: flex-end;
     }
     .menu .container-enlaces-nav{
-        margin-top: 80px;
         padding: 20px;
-        background-color: white;
+        background-color: #3F8FE3;
         height: 100vh;
+        margin-top: 26px;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
@@ -384,8 +391,20 @@ main article{
 
     .menu ul li {
         border-radius: 10px;
-        border : 1px solid gray;
         margin-bottom: 5px;
+        margin: 20px 0;
+    }
+
+    .menu ul li a {
+        color: white;
+    }
+
+    .menu ul li a  i{
+        transform: rotateZ(-90deg);
+    }
+
+    .menu ul li::before {
+        display: none;
     }
 
     .grid{
@@ -401,10 +420,15 @@ main article{
         grid-template-areas: "categorias categorias categorias categorias";
     }
 
-    .grid .subcategoria.activo {
+    .grid .subcategoria{
         display: block;
+        padding: 0;
+        transition: .3s ease all;
     }
 
+    .grid .subcategoria::before {
+        display: none;
+    }
 
     .grid.activo{
         transform: translatex(0%);
@@ -415,9 +439,11 @@ main article{
     .grid .btn-regresar{
         display: inline-block;
     }
-    /*.grid .banners{
+
+    .grid .banners{
         display: none;
-    }*/
+    }
+
     .grid .container-subcategorias{
         position: absolute;
         top: 0;

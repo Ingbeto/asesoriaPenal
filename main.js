@@ -1,7 +1,7 @@
 const btnInicio = document.getElementById('btn-inicio'),
     btnCerrarMenu = document.getElementById('btn-menu-cerrar'),
-    containerEnlacesNav = document.querySelector('#menu .container-enlaces-nav'),
-    containerSubcategorias = document.querySelector('#menu .container-subcategorias'),
+    containerEnlacesNav = document.querySelector('.container-enlaces-nav'),
+    containerSubcategorias = document.querySelector('.container-subcategorias'),
     esDispositivoMovil = () => window.innerWidth <= 800;
 
 document.querySelectorAll('.desplegables').forEach((item) => {
@@ -56,12 +56,12 @@ document.querySelectorAll('.grid .categorias .btn-regresar').forEach(button => {
   });
 });
 
-document.querySelectorAll('#menu .categorias a').forEach((elemento)=>{
+document.querySelectorAll('.grid .categorias a').forEach((elemento)=>{
     elemento.addEventListener('click',(e)=>{
         e.preventDefault();
         if (esDispositivoMovil()){
                 containerSubcategorias.classList.add('activo');
-                document.querySelectorAll('#menu .subcategoria').forEach((categoria)=>{
+                document.querySelectorAll('.grid .subcategoria').forEach((categoria)=>{
                     categoria.classList.remove('activo');
                     if(categoria.dataset.categoria == e.target.dataset.categoria){
                         categoria.classList.add('activo');

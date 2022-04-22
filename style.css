@@ -329,6 +329,7 @@ main article{
 
     .banner-image {
         background-color: #2C65A8;
+        padding-top: 5px;
     }
 
     .header-nav {

@@ -5,7 +5,7 @@ const btnInicio = document.getElementById('btn-inicio'),
     esDispositivoMovil = () => window.innerWidth <= 800;
 
 document.querySelectorAll('.desplegables').forEach((item) => {
-    const container = document.getElementById   (`${item.dataset.container}`);
+    const container = document.getElementById(`${item.dataset.container}`);
     if(container){
         item.addEventListener('mouseover', (e) => {
             document.querySelectorAll('.grid').forEach(grid => {
@@ -28,14 +28,14 @@ document.querySelectorAll('.categorias a').forEach((elemento)=>{
     if(!esDispositivoMovil()){
       elemento.addEventListener('mouseenter',(e)=>{
         document.querySelectorAll('.subcategoria').forEach((categoria)=>{
-            categoria.classList.remove('activo');   
+            categoria.classList.remove('activo');
             if(categoria.dataset.categoria === e.target.dataset.categoria){
                 categoria.classList.add('activo');
             }
         });
     });
     }
-  
+
 });
 
 document.querySelector('#btn-menu-barras').addEventListener('click',(e)=>{
@@ -52,7 +52,7 @@ document.querySelector('#btn-menu-barras').addEventListener('click',(e)=>{
 document.querySelectorAll('.grid .categorias .btn-regresar').forEach(button => {
   button.addEventListener('click', (event) => {
       event.preventDefault();
-      button.parentElement.parentElement.classList.remove('activo')
+      button.parentElement.parentElement.parentElement.classList.remove('activo')
   });
 });
 
@@ -61,6 +61,9 @@ document.querySelectorAll('.grid .categorias a').forEach((elemento)=>{
         e.preventDefault();
         if (esDispositivoMovil()){
                 containerSubcategorias.classList.add('activo');
+                document.querySelectorAll('.grid .categorias').forEach((categoria) => {
+                    console.log(categoria);
+                });
                 document.querySelectorAll('.grid .subcategoria').forEach((categoria)=>{
                     categoria.classList.remove('activo');
                     if(categoria.dataset.categoria == e.target.dataset.categoria){
@@ -74,7 +77,7 @@ document.querySelectorAll('.grid .categorias a').forEach((elemento)=>{
 document.querySelectorAll('.grid .container-subcategorias .btn-regresar').forEach(button => {
   button.addEventListener('click', (event) => {
       event.preventDefault();
-      button.parentElement.parentElement.classList.remove('activo')
+      button.parentElement.parentElement.parentElement.classList.remove('activo')
   });
 });
 

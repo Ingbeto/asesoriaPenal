@@ -436,7 +436,7 @@ main article{
         z-index: 3000;
         width: 80%;
         position: fixed;
-        top: 0;
+        top: 148px;
         left: 0;
         height: 100vh;
         grid-template-areas: "categorias categorias categorias categorias";
@@ -472,6 +472,7 @@ main article{
 
     .grid.activo{
         transform: translatex(0%);
+        width: 100%;
     }
     .grid::before{
         display: none;

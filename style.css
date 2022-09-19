@@ -51,6 +51,11 @@ main article{
   background-color: transparent;
 }
 
+.container-header {
+    position: sticky;
+    top: 0;
+}
+
 
 .header-nav .llamanos {
     background-color: #65A4B3;
@@ -66,6 +71,25 @@ main article{
 .menu {
     padding:5px;
     flex-grow: 1;
+}
+
+@keyframes rotar{
+  0%{
+    transfrom: rotatez(0);
+  }
+
+  50% {
+    transform: rotateZ(-95deg);
+  }
+
+  100% {
+    transform: rotateZ(0);
+  }
+
+}
+
+.dropdowns i.activo{
+    animation: rotar 1s normal;
 }
 
 .menu .container-botones-menu{
@@ -126,7 +150,6 @@ main article{
     border: 1px solid #14293D;
 }
 
-
 .menu ul li a {
     color:#14293D;
     font-family: 'Nueva Seravek',Helvetica,Arial,Lucida,sans-serif;
@@ -169,13 +192,14 @@ main article{
 }
 
 .grid .btn-cerrar {
+    display: none;
     border: none;
     color: black;
     background-color: white;
     cursor: pointer;
     font-size: 1.8rem;
     position: absolute;
-    top:10px;
+    top:14px;
     right: 20px;
 }
 
@@ -336,7 +360,6 @@ main article{
     }
 
     .header-nav {
-        height: 100px;
         flex-wrap: wrap;
         padding: 0 10px;
         align-items: center;
@@ -380,7 +403,7 @@ main article{
         justify-content: flex-end;
     }
     .menu .container-enlaces-nav{
-        padding: 20px;
+        padding: 0 20px;
         background-color: #3F8FE3;
         height: 100vh;
         margin-top: 26px;
@@ -389,14 +412,23 @@ main article{
         justify-content: flex-start;
         position: fixed;
         left: 0;
-        height: 100vh;
+        height: 0;
         width: 100%;
         z-index: 2000;
         transition: .3s ease all;
-        transform: translate(-100%);
     }
+
+
+    .menu .container-enlaces-nav ul{
+        display: none;
+    }
+
+    .menu .container-enlaces-nav.activo ul{
+        display: block;
+    }
+
     .menu .container-enlaces-nav.activo{
-        transform: translate(0%);
+        height: 54vh;
     }
 
     .menu .btns{
@@ -438,11 +470,16 @@ main article{
         position: fixed;
         top: 148px;
         left: 0;
-        height: 100vh;
         grid-template-areas: "categorias categorias categorias categorias";
     }
 
+    .grid .categorias{
+        min-height: 54vh;
+    }
+
+
     .grid .btn-cerrar {
+        display: block;
         color: white;
         background-color: #3F8FE3;
     }

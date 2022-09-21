@@ -14,6 +14,7 @@ document.querySelectorAll('.desplegables').forEach((item) => {
             }, 1000);
         }
         container.classList.toggle('activo');
+        container.style.height = 'auto';
     });
 
     if(esDispositivoMovil()) return;
@@ -64,10 +65,8 @@ document.querySelector('#btn-menu-barras').addEventListener('click',(e)=>{
     e.preventDefault();
     if(containerEnlacesNav.classList.contains('activo')){
         containerEnlacesNav.classList.remove('activo');
-        document.querySelector('body').style.overflow = 'visible';
     }else{
         containerEnlacesNav.classList.add('activo')
-        document.querySelector('body').style.overflow = 'hidden';
     }
 });
 
@@ -83,9 +82,6 @@ document.querySelectorAll('.grid .categorias a').forEach((elemento)=>{
         e.preventDefault();
         if (esDispositivoMovil()){
                 containerSubcategorias.classList.add('activo');
-                document.querySelectorAll('.grid .categorias').forEach((categoria) => {
-                    console.log(categoria);
-                });
                 document.querySelectorAll('.grid .subcategoria').forEach((categoria)=>{
                     categoria.classList.remove('activo');
                     if(categoria.dataset.categoria == e.target.dataset.categoria){

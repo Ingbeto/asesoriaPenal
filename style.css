@@ -52,7 +52,7 @@ main article{
 }
 
 .container-header {
-    position: sticky;
+    position: relative;
     top: 0;
 }
 
@@ -410,7 +410,7 @@ main article{
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        position: fixed;
+        position: absolute;
         left: 0;
         height: 0;
         width: 100%;
@@ -428,7 +428,7 @@ main article{
     }
 
     .menu .container-enlaces-nav.activo{
-        height: 54vh;
+        height: 64vh;
     }
 
     .menu .btns{
@@ -446,7 +446,7 @@ main article{
     .menu ul li {
         border-radius: 10px;
         margin-bottom: 5px;
-        margin: 20px 0;
+        margin: 36px 0;
     }
 
     .menu ul li a {
@@ -467,14 +467,14 @@ main article{
         transform: translateX(-100%);
         z-index: 3000;
         width: 80%;
-        position: fixed;
+        position: absolute;
         top: 148px;
         left: 0;
         grid-template-areas: "categorias categorias categorias categorias";
     }
 
     .grid .categorias{
-        min-height: 54vh;
+        min-height: 64vh;
     }
 
 
